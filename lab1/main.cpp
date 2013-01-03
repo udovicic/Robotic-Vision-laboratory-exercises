@@ -2,7 +2,6 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <opencv2/opencv.hpp>
-#include <iostream>
 
 void redraw(int pos = 0, void* data = 0) {
     cv::Mat* imgIn = (cv::Mat*) data,
@@ -37,7 +36,7 @@ int main(int argc, char *argv[])
         a.exit(-1);
     }
 
-    // prepare output windows
+    // prepare GUI
     cv::namedWindow("Original image", cv::WINDOW_AUTOSIZE);
     cv::namedWindow("Processed image", cv::WINDOW_AUTOSIZE);
     cv::createTrackbar("Canny high","Processed image", &cannyHigh,400,redraw,(void *)&imgIn);
