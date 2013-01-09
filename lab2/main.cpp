@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
     int val = 80;
 
     cv::namedWindow("Original image", cv::WINDOW_AUTOSIZE);
-    cv::setMouseCallback("Original image", mcbSelectROI, (void *)&imgIn);
+    cv::setMouseCallback("Original image", mcbSelectROI, NULL);
     char    *btn1 = "CV_TM_SQDIFF",
             *btn2 = "CV_TM_CORR",
             *btn3 = "CV_TM_CCOEFF",

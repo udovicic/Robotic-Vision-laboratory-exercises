@@ -10,3 +10,11 @@ Introduction to OpenCV. Example of edge detection using Canny detector.
 ## Exercise 2
 
 Comparing different methods for template matching.
+
+## Exercise 3
+
+Find angle and distance of the dominant line from the upper left corner of the picture.
+
+## Exercise 4
+
+Find the object from first picture on the secound picture using SIFT.
