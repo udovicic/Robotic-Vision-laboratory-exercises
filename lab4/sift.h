@@ -14,6 +14,8 @@ class sift : public QMainWindow
     
 public:
     explicit sift(QWidget *parent = 0);
+    bool useGPU;
+    bool forceCPU;
     ~sift();
 
     // static mouse callback
@@ -35,6 +37,9 @@ private slots:
     void on_btnROI_clicked();
 
     void on_btnShowObject_clicked();
+
+    void on_btnDetectSIFT_clicked();
+
 
 private:
     Ui::sift *ui;

@@ -3,7 +3,7 @@
 #include <QFileDialog>
 #include <opencv2/opencv.hpp>
 
-void redraw(int pos = 0, void* data = 0) {
+void redraw(int , void* data = 0) {
     cv::Mat* imgIn = (cv::Mat*) data,
              imgOut;
 
