@@ -14,8 +14,7 @@ class sift : public QMainWindow
     
 public:
     explicit sift(QWidget *parent = 0);
-    bool useGPU;
-    bool forceCPU;
+    bool GPUavailable;
     ~sift();
 
     // static mouse callback
@@ -38,7 +37,7 @@ private slots:
 
     void on_btnShowObject_clicked();
 
-    void on_btnDetectSIFT_clicked();
+    void on_btnDetectObject_clicked();
 
 
 private:
@@ -53,6 +52,9 @@ private:
     void loadFromFile(cv::Mat *inImage);
     void captureFromCamera(cv::Mat *inImage);
     void showImage(cv::Mat *inImage);
+
+    void detectOnCpu(int method);
+    void detectOnGpu(int method);
 };
 
 #endif // SIFT_H

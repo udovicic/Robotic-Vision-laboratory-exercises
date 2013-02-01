@@ -150,7 +150,7 @@
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>SIFT</string>
+           <string>Object detection</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
@@ -158,10 +158,39 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="btnDetectSIFT">
+         <widget class="QPushButton" name="btnDetectObject">
           <property name="text">
-           <string>Detect SIFT</string>
+           <string>Detect</string>
           </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbMethod">
+          <item>
+           <property name="text">
+            <string>SIFT</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SURF</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ORB</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>SURF on GPU</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ORB on GPU</string>
+           </property>
+          </item>
          </widget>
         </item>
         <item>

@@ -11,10 +11,10 @@ int main(int argc, char *argv[])
     try {
         ndev = cv::gpu::getCudaEnabledDeviceCount();
         if (ndev > 0) {
-            w.useGPU = true;
+            w.GPUavailable = true;
         }
     } catch (cv::Exception& e) {
-        w.useGPU = false;
+        w.GPUavailable = false;
         std::cerr << e.what() << std::endl;
     }
 

@@ -18,3 +18,11 @@ Find angle and distance of the dominant line from the upper left corner of the p
 ## Exercise 4
 
 Find the object from first picture on the secound picture using SIFT.
+
+## Exercise 5
+
+3D reconstruction from two 2D images.
+
+## Exercise 6
+
+Detect and mark dominant plane on the 2.5D Kinect image.
