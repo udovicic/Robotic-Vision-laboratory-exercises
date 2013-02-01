@@ -3,4 +3,5 @@ TEMPLATE = subdirs
 SUBDIRS += \
     lab1 \
     lab2 \
-    lab4
+    lab4 \
+    lab6
