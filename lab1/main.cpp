@@ -1,4 +1,4 @@
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <opencv2/opencv.hpp>

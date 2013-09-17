@@ -1,4 +1,4 @@
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QMessageBox>
 #include <QFileDialog>
 #include <opencv2/opencv.hpp>
@@ -152,9 +152,9 @@ int main(int argc, char *argv[])
             *btn2 = "CV_TM_CORR",
             *btn3 = "CV_TM_CCOEFF",
             *btn4 = "Recalculate";
-    cv::createButton(btn1, btnClick, btn1, CV_RADIOBOX, 1);
-    cv::createButton(btn2, btnClick, btn2, CV_RADIOBOX, 0);
-    cv::createButton(btn3, btnClick, btn3, CV_RADIOBOX, 0);
+    cv::createButton(btn1, btnClick, btn1, cv::QT_RADIOBOX, 1);
+    cv::createButton(btn2, btnClick, btn2, cv::QT_RADIOBOX, 0);
+    cv::createButton(btn3, btnClick, btn3, cv::QT_RADIOBOX, 0);
     cv::createTrackbar("Threshold", "", &val, 100, tbClick, 0);
     cv::createButton(btn4, btnClick, btn4);
 

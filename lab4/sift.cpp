@@ -8,7 +8,8 @@
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/nonfree/features2d.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
-#include <opencv2/gpu/gpu.hpp>
+#include <opencv2/gpu.hpp>
+#include <opencv2/nonfree/gpu.hpp>
 
 sift::sift(QWidget *parent) :
     QMainWindow(parent),
@@ -36,7 +37,7 @@ void sift::loadFromFile(cv::Mat *inImage) {
         return;
     }
 
-    *(inImage) = cv::imread(dat.toUtf8().constData(), CV_LOAD_IMAGE_GRAYSCALE);
+    *(inImage) = cv::imread(dat.toUtf8().constData(), cv::IMREAD_GRAYSCALE);
     if (!this->isLoaded(inImage)) {
         QMessageBox::critical(0,"Error opening image", "File not supported");
         return;
@@ -75,7 +76,7 @@ void sift::captureFromCamera(cv::Mat *inImage) {
         this->on_btnCamera1_clicked();
         return;
     } else if (response == QMessageBox::Ok) {
-        cv::cvtColor(frame,frame, CV_RGB2GRAY);
+        cv::cvtColor(frame,frame, cv::COLOR_RGB2GRAY);
         *(inImage) = frame.clone();
     }
 
